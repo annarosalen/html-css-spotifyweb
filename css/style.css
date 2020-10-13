@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
- .contenitore{
-   position: relative;
- }
+
+
 /* regole di debug */
 
 #sezione-main{
@@ -13,8 +12,8 @@
   justify-content: column;
 }
 
-#colonna-menu{
-  background-color: red;
+#colonna-sinistra{
+  /* background-color: red; */
   min-height: 600px;
   width: 15%;
 }
@@ -40,9 +39,6 @@
   min-height: 400px;
 }
 
-#sezione-play{
-
-}
 
 #player{
   position: fixed ;
@@ -52,4 +48,26 @@
   min-height: 100px;
   z-index: 300;
   width: 100%;
+}
+
+/* colonna menu */
+
+#logo{
+  min-height: 50px;
+  background-color: grey;
+}
+
+#menu{
+  min-height: 100px;
+  background-color: red;
+}
+
+#playlist{
+  min-height: 300px;
+  background-color: blue;
+}
+
+#app{
+  min-height: 150px;
+  background-color: purple;
 }
