@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ .contenitore{
+   position: relative;
+ }
+/* regole di debug */
+
+#sezione-main{
+  display: flex;
+  justify-content: column;
+}
+
+#colonna-menu{
+  background-color: red;
+  min-height: 600px;
+  width: 15%;
+}
+
+#parte-centrale{
+  background-color: blue;
+  min-height: 600px;
+  width: 85%;
+}
+
+#parte-centrale #upgrade{
+  background-color: black;
+  min-height: 100px;
+}
+
+#parte-centrale #menu-secondario{
+  background-color: green;
+  min-height: 100px;
+}
+
+#parte-centrale #albums{
+  background-color: yellow;
+  min-height: 400px;
+}
+
+#sezione-play{
+
+}
+
+#player{
+  position: fixed ;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  min-height: 100px;
+  z-index: 300;
+  width: 100%;
+}
