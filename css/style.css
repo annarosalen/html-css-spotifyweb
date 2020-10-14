@@ -42,11 +42,6 @@ a{
   min-height: 50px;
   position: fixed;
   width: 85%;
-  border: solid white 1px;
-}
-
-#parte-centrale #menu-secondario{
-  border: solid white 1px;
 }
 
 #parte-centrale #contenitore-albums{
@@ -315,8 +310,9 @@ a{
 
 #comandi-destra{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 20px;
 }
 
 #comandi-destra a{
@@ -340,5 +336,4 @@ a{
   border: 20px;
   border-radius: 50px;
   background-color: white;
-
 }
