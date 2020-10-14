@@ -33,8 +33,7 @@ a{
 }
 
 #parte-centrale{
-  background-color: blue;
-  min-height: 600px;
+  /* min-height: 600px; */
   flex-grow: 1;
 }
 
@@ -47,25 +46,15 @@ a{
 }
 
 #parte-centrale #menu-secondario{
-  min-height: 100px;
   border: solid white 1px;
 }
 
 #parte-centrale #contenitore-albums{
-  min-height: 400px;
+  /* min-height: 400px; */
   border: solid white 1px;
 }
 
 
-#player{
-  /* position: fixed ;
-  bottom: 0;
-  left: 0; */
-  background-color: grey;
-  min-height: 50px;
-  z-index: 300;
-  width: 100%;
-}
 
 /************* debug navbar************/
 
@@ -191,6 +180,10 @@ a{
 
 /*** albums rows***** */
 
+#contenitore-albums{
+  overflow:scroll;
+  overflow-x:hidden;
+}
 .albums-row{
   min-height: 200px;
   border: solid white 1px;
@@ -209,6 +202,18 @@ a{
   text-align: center;
   max-width: 150px;
   font-size: 14px;
+  position: relative;
+}
+
+.Imghover{
+  position: absolute;
+  top: 50%;
+  bottom:50%;
+  display: none;
+}
+
+.album:hover .Imghover{
+  display: block;
 }
 
 .album h4{
@@ -223,4 +228,117 @@ a{
 
 #artisti img{
   border-radius: 100%;
+}
+
+/* **************footer****************** */
+#player{
+  background-color: #282828;
+  min-height: 50px;
+  z-index: 300;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brano-corrente, #comandi-destra{
+  width: 20%;
+}
+
+#comandi-play{
+  flex-grow: 1;
+}
+
+/* sinistra */
+#brano-corrente{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#brano-corrente img{
+  max-height: 50px;
+  max-width: auto;
+}
+
+#brano{
+  padding: 0 80px 0 20px;
+  font-size: 12px;
+}
+
+#brano a{
+  display: block;
+}
+
+#brano #icons{
+  display: inline-block;
+}
+
+/* centro */
+#comandi-play{
+  padding: 20px 250px;
+}
+
+#comandi i{
+  padding-right: 20px;
+}
+
+#comandi{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+#tempo{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+#barra-progressione{
+  height: 3px;
+  width: 300px;
+  border: solid grey;
+  border: 20px;
+  border-radius: 50px;
+  background-color: grey;
+  margin-top: 10px;
+}
+
+#barra-progr-bianca{
+  height: 3px;
+  width: 100px;
+  border: solid white;
+  border: 20px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+#comandi-destra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#comandi-destra a{
+  padding-right: 10px;
+}
+
+#barra-volume{
+  height: 3px;
+  width: 100px;
+  border: solid grey;
+  border: 20px;
+  border-radius: 50px;
+  background-color: grey;
+  margin-top: 3px;
+}
+
+#barra-vol-bianca{
+  height: 3px;
+  width: 30px;
+  border: solid white;
+  border: 20px;
+  border-radius: 50px;
+  background-color: white;
+
 }

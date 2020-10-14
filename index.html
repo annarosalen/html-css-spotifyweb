@@ -78,9 +78,15 @@
               <h3 class="text-white">Recently played</h3>
               <div class="albums" >
                 <div class="album">
-                  <img src="img/metal_lifting.jpg" alt="">
+                  <div class="imgalbum">
+                    <img src="img/metal_lifting.jpg" alt="">
+                  </div>
+                  <div class="Imghover">
+                    <i class="fa fa-play-circle-o text-white" aria-hidden="true"></i>
+                  </div>
                   <h4 class="text-white">Heavy Metal</h4>
                   <span class="text-grey">Subtitle</span>
+
                 </div>
                 <div class="album">
                   <img src="img/stranger.jpeg" alt="">
@@ -148,12 +154,51 @@
 
 
 
-      <section id="sezione-play">
+      <footer>
         <div id="player">
 
+          <div id="brano-corrente">
+            <a href="#"><img src="img/sinister.jpeg" alt=""></a>
+            <div id="brano">
+              <a class="text-white" href="#"><strong>Sinister</strong></a>
+              <a class="text-grey hover" href="#"><strong>Nome Brano</strong></a>
+            </div>
+            <div id="icons" class="text-grey">
+              <i class="fa fa-heart-o hover" aria-hidden="true"></i>
+              <i class="fa fa-folder-o hover" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div id="comandi-play">
+            <div id="comandi">
+              <a href="#"><i class="fa fa-random fa-lg text-white" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-step-backward fa-lg text-white" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-play-circle-o fa-2x text-white" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-step-forward fa-lg text-white" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-repeat fa-lg text-white" aria-hidden="true"></i></a>
+            </div>
+            <div id="tempo">
+                <span class="text-white">0.25</span>
+                <a href="#">
+                  <div id="barra-progressione">
+                    <div id="barra-progr-bianca"></div>
+                  </div>
+                </a>
+                <span class="text-white">4:35</span>
+            </div>
+          </div>
+
+          <div id="comandi-destra">
+            <a href="#" class="text-white"><i class="fa fa-list" aria-hidden="true"></i></a>
+            <a href="#" class="text-white"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+            <a href="#" class="text-white"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            <div id="barra-volume">
+              <div id="barra-vol-bianca"></div>
+            </div>
+          </div>
         </div>
 
-      </section>
+      </footer>
 
     </div>
 
