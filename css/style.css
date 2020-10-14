@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .text-grey{
@@ -11,11 +12,20 @@
 .text-white{
   color:white;
 }
-/* ************regole di debug ******************/
 
-#main-section{
-  display: flex;
+a{
+  text-decoration: none;
 }
+
+.marginb-20{
+  margin-bottom: 20px;
+}
+
+.hover:hover{
+  color: white;
+  font-weight: bold;
+}
+/* ************regole di debug ******************/
 
 #navbar{
   min-height: 600px;
@@ -45,9 +55,9 @@
 
 
 #player{
-  position: fixed ;
+  /* position: fixed ;
   bottom: 0;
-  left: 0;
+  left: 0; */
   background-color: grey;
   min-height: 50px;
   z-index: 300;
@@ -56,30 +66,23 @@
 
 /************* debug navbar************/
 
-#logo{
-  min-height: 50px;
-  border: solid white 1px;
-}
-
-#menu{
-  min-height: 100px;
-  border: solid  white 1px;
-}
-
 #playlist{
-  min-height: 300px;
   border: solid  white 1px;
 }
 
-#app{
-  min-height: 150px;
-  border: solid white 1px;
-}
 /* ***********fine debug************************* */
+
+#main-section{
+  display: flex;
+}
+
+/************ navbar sinistra************ */
 
 #navbar{
   background-color: #030303;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #logo img{
@@ -87,8 +90,8 @@
   margin-bottom: 20px;
 }
 
-#menu a{
-  text-decoration: none;
+#menu{
+  font-size: 14px;
 }
 
 #menu img{
@@ -96,3 +99,49 @@
   max-width: 20px;
   margin-right: 10px;
 }
+
+#playlist{
+  flex-grow: 1;
+}
+
+#playlist h4{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#playlist>a>i{
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+#playlist>a{
+  font-size: 15px;
+}
+
+#playlist ul{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 15px;
+}
+
+#profilo{
+  border-top: solid grey 1px;
+  padding-top: 10px;
+}
+#profilo img{
+  max-height: 20px;
+  max-width: 20px;
+  background-color: grey;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+/* *************fine navbar sinistra************* */
+
+/************ inizio parte centrale ***********/
