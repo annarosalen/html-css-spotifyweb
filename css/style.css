@@ -31,15 +31,43 @@ a{
   border: solid white 1px;
 }
 
-
 #playlist{
   border: solid  white 1px;
 }
 
 /* ***********fine debug************************* */
+/************ nav mobile************ */
+#navmobile{
+  display: none;
+  width: 40px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
 
+#menu-mobile a img{
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+#download-small{
+  padding: 10px;
+}
+#profilo-small img{
+  max-height: 20px;
+  max-width: 20px;
+  background-color: grey;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+
+/* *************fine nav mobile******************* */
+
+/* inizio main */
 #main-section{
   display: flex;
+  height: calc(100vh - 120px);
 }
 
 /************ navbar sinistra************ */
@@ -50,6 +78,7 @@ a{
   padding: 10px;
   display: flex;
   flex-direction: column;
+
 }
 
 #bloccosopra{
@@ -75,7 +104,6 @@ a{
 
 #playlist{
   flex-grow: 1;
-  overflow-y: scroll;
 }
 
 #playlist h4{
@@ -88,8 +116,8 @@ a{
   padding-right: 10px;
 }
 
-#playlist ul{
-  overflow: auto;
+#lista-playlist{
+  overflow: scroll;
 }
 #playlist li{
   font-size: 14px;
@@ -247,7 +275,7 @@ a{
 
 #player{
   background-color: #282828;
-  height: 12vh;
+  height: 120px;;
   z-index: 300;
   width: 100%;
   position: fixed;
