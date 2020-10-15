@@ -36,35 +36,8 @@ a{
 }
 
 /* ***********fine debug************************* */
-/************ nav mobile************ */
-#navmobile{
-  display: none;
-  width: 40px;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-}
 
-#menu-mobile a img{
-  height: 20px;
-  margin-bottom: 20px;
-}
-
-#download-small{
-  padding: 10px;
-}
-#profilo-small img{
-  max-height: 20px;
-  max-width: 20px;
-  background-color: grey;
-  border-radius: 20px;
-  margin: 10px;
-}
-
-
-/* *************fine nav mobile******************* */
-
-/* inizio main */
+/**************** inizio main ************/
 #main-section{
   display: flex;
   height: calc(100vh - 120px);
@@ -399,3 +372,33 @@ a{
   border-radius: 50px;
   background-color: white;
 }
+
+
+
+/************ nav mobile************ */
+#navmobile{
+  display: none;
+  width: 40px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu-mobile a img{
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+#download-small{
+  padding: 10px;
+}
+#profilo-small img{
+  max-height: 20px;
+  max-width: 20px;
+  background-color: grey;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+
+/* *************fine nav mobile******************* */
