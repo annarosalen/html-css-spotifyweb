@@ -27,9 +27,6 @@ a{
 }
 /* ************regole di debug ******************/
 
-#parte-centrale #contenitore-albums{
-  border: solid white 1px;
-}
 
 #playlist{
   border: solid  white 1px;
@@ -40,18 +37,18 @@ a{
 /**************** inizio main ************/
 #main-section{
   display: flex;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
 }
 
 /************ navbar sinistra************ */
 
 #navbar{
   background-color: #030303;
-  width: 15%;
+  width: 250px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-
+  z-index: 900;
 }
 
 #bloccosopra{
@@ -91,16 +88,16 @@ a{
 
 #lista-playlist{
   overflow: scroll;
+  margin-top: 10px;
+  font-size: 14px;
+  height: 150px;
+  overflow-x: hidden;
 }
-#playlist li{
+#lista-playlist li{
   font-size: 14px;
   padding-top: 10px;
 }
 
-#playlist ul{
-  margin-top: 10px;
-  font-size: 14px;
-}
 
 #app{
   display: flex;
@@ -119,7 +116,6 @@ a{
 
 #profilo{
   border-top: solid grey 1px;
-  padding-top: 10px;
   padding-left: 10px;
 }
 
@@ -129,6 +125,7 @@ a{
   background-color: grey;
   border-radius: 20px;
   margin-right: 10px;
+  margin-top: 5px;
 }
 
 /* *************fine navbar sinistra************* */
@@ -137,9 +134,11 @@ a{
 
 #parte-centrale{
   background-color: #141922;
-  flex-grow: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
 
 /**** upgrade**** */
@@ -153,7 +152,7 @@ a{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 900;
+  z-index: 800;
 }
 
 #upgrade button {
@@ -248,7 +247,7 @@ a{
 
 #player{
   background-color: #282828;
-  height: 120px;;
+  height: 100px;;
   z-index: 300;
   width: 100%;
   position: fixed;
@@ -380,13 +379,23 @@ a{
   display: none;
   width: 40px;
   background-color: black;
+}
+
+#contenitore-flex-mobile{
   display: flex;
   flex-direction: column;
 }
 
+
 #menu-mobile a img{
   height: 20px;
-  margin-bottom: 20px;
+  margin: 10px;
+}
+
+#app-mobile{
+  position: absolute;
+  bottom: 0;
+  left:0;
 }
 
 #download-small{
@@ -402,3 +411,12 @@ a{
 
 
 /* *************fine nav mobile******************* */
+
+@media screen and (max-width:768px) {
+  #navmobile{
+    display: block;
+  }
+  #navbar{
+    display: none;
+  }
+}
