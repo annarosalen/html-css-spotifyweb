@@ -27,31 +27,10 @@ a{
 }
 /* ************regole di debug ******************/
 
-#navbar{
-  min-height: 600px;
-  width: 15%;
-}
-
-#parte-centrale{
-  /* min-height: 600px; */
-  flex-grow: 1;
-}
-
-#parte-centrale #upgrade{
-  background-color: #090909;
-  min-height: 50px;
-  position: fixed;
-  width: 85%;
-}
-
 #parte-centrale #contenitore-albums{
-  /* min-height: 400px; */
   border: solid white 1px;
 }
 
-
-
-/************* debug navbar************/
 
 #playlist{
   border: solid  white 1px;
@@ -67,9 +46,16 @@ a{
 
 #navbar{
   background-color: #030303;
+  width: 15%;
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+
+#bloccosopra{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 #logo img{
@@ -89,7 +75,7 @@ a{
 
 #playlist{
   flex-grow: 1;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 #playlist h4{
@@ -122,10 +108,20 @@ a{
   font-size: 15px;
 }
 
+#download{
+  padding: 10px;
+}
+
+#download i{
+  padding-right: 10px;
+}
+
 #profilo{
   border-top: solid grey 1px;
   padding-top: 10px;
+  padding-left: 10px;
 }
+
 #profilo img{
   max-height: 20px;
   max-width: 20px;
@@ -140,11 +136,23 @@ a{
 
 #parte-centrale{
   background-color: #141922;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
+
+/**** upgrade**** */
 #upgrade{
+  background-color: #080b12;
+  min-height: 50px;
+  position: fixed;
+  width: 85%;
+  left:15%;
+  top:0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 900;
 }
 
 #upgrade button {
@@ -176,49 +184,58 @@ a{
 /*** albums rows***** */
 
 #contenitore-albums{
-  overflow:scroll;
-  overflow-x:hidden;
-}
-.albums-row{
-  min-height: 200px;
-  border: solid white 1px;
+  flex-grow: 1;
 }
 
 .albums-row h3{
   padding: 10px;
 }
+
 .albums{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.album{
+.album-box{
   text-align: center;
-  max-width: 150px;
+  max-width: 200px;
   font-size: 14px;
+  flex-shrink: 2;
+}
+
+.imgalbum{
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
+.imgalbum img{
+  max-height: 200px;
+  max-width: auto;
+  padding: 10px;
+}
+
+.imgalbum img:hover{
+  filter: brightness(50%);
+}
+
 .Imghover{
+  font-size: 50px;
+  align-self: center;
   position: absolute;
-  top: 50%;
-  bottom:50%;
   display: none;
 }
 
-.album:hover .Imghover{
+.imgalbum:hover .Imghover{
   display: block;
 }
 
-.album h4{
+.testo-albumbox{
   padding: 10px;
 }
-
-.album img{
-  max-height: 150px;
-  max-width: auto;
-  padding: 10px;
+.testo-albumbox h4{
+  padding-bottom: 10px;
 }
 
 #artisti img{
@@ -226,21 +243,28 @@ a{
 }
 
 /* **************footer****************** */
+
+
 #player{
   background-color: #282828;
-  min-height: 50px;
+  height: 12vh;
   z-index: 300;
   width: 100%;
+  position: fixed;
+  bottom:0;
+  left: 0;
   display: flex;
   justify-content: space-between;
 }
 
 #brano-corrente, #comandi-destra{
   width: 20%;
+  flex-shrink: 2;
 }
 
 #comandi-play{
-  flex-grow: 1;
+  width:60%;
+
 }
 
 /* sinistra */
@@ -248,6 +272,7 @@ a{
   display: flex;
   align-items: center;
   padding: 20px;
+
 }
 
 #brano-corrente img{
@@ -258,19 +283,21 @@ a{
 #brano{
   padding: 0 80px 0 20px;
   font-size: 12px;
+  flex-shrink: 3;
 }
 
 #brano a{
   display: block;
 }
 
-#brano #icons{
-  display: inline-block;
+#icons{
+  flex-shrink: 3;
 }
 
 /* centro */
 #comandi-play{
-  padding: 20px 250px;
+  padding: 20px;
+  flex-shrink: 3;
 }
 
 #comandi i{
@@ -281,12 +308,18 @@ a{
   display: flex;
   justify-content: center;
   align-items: baseline;
+  flex-shrink: 3;
 }
+
 #tempo{
   display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+  justify-content: center;
+  font-size: 12px;
   padding-top: 20px;
+  flex-shrink: 3;
+}
+#tempo span{
+  padding: 0 10px;
 }
 
 #barra-progressione{
@@ -308,6 +341,7 @@ a{
   background-color: white;
 }
 
+/* destra */
 #comandi-destra{
   display: flex;
   justify-content: flex-end;
