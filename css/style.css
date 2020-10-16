@@ -81,7 +81,7 @@ a{
 #lista-playlist{
   overflow: scroll;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 12px;
   height: 150px;
   overflow-x: hidden;
 }
@@ -90,17 +90,18 @@ a{
   padding-top: 10px;
 }
 
-
 #app{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 15px;
-  position: fixed;
+  position: sticky;
   bottom: 100px;
-  left:0;
+  left: 0;
   background-color: black;
-  width: 210px;
+  width: 250px;
+  padding: 5px;
+
 }
 
 #download{
@@ -144,7 +145,7 @@ a{
   min-height: 50px;
   position: fixed;
   width: 85%;
-  left:15%;
+  left: 15%;
   top:0;
   display: flex;
   justify-content: flex-end;
@@ -181,7 +182,7 @@ a{
 /*** albums rows***** */
 
 #contenitore-albums{
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .albums-row h3{
@@ -191,14 +192,13 @@ a{
 .albums{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .album-box{
   text-align: center;
   max-width: 200px;
   font-size: 14px;
-  flex-shrink: 2;
+  flex-shrink: 10;
 }
 
 .imgalbum{
@@ -212,6 +212,7 @@ a{
   max-width: auto;
   padding: 10px;
 }
+
 
 .imgalbum img:hover{
   filter: brightness(50%);
@@ -260,7 +261,7 @@ a{
 }
 
 #comandi-play{
-  width:60%;
+  max-width:60%;
 
 }
 
@@ -376,6 +377,7 @@ a{
   display: none;
   width: 40px;
   background-color: black;
+  z-index: 850;
 }
 
 #contenitore-flex-mobile{
@@ -421,5 +423,10 @@ a{
   }
   #navbar{
     display: none;
+  }
+
+  #upgrade{
+    width: 95%;
+    left: 5%;
   }
 }
