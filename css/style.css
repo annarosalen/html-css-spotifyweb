@@ -99,7 +99,6 @@ a{
   bottom: 100px;
   left: 0;
   background-color: black;
-  width: 250px;
   padding: 5px;
 
 }
@@ -144,8 +143,8 @@ a{
   background-color: #080b12;
   min-height: 50px;
   position: fixed;
-  width: 85%;
-  left: 15%;
+  width: 100%;
+  left: 0;
   top:0;
   display: flex;
   justify-content: flex-end;
