@@ -1,3 +1,4 @@
+/* regole generali */
 *{
   margin: 0;
   padding: 0;
@@ -36,11 +37,11 @@ a{
 
 #navbar{
   background-color: #030303;
-  width: 250px;
+  width: 15%;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  z-index: 900;
+  overflow-y: scroll;
 }
 
 #bloccosopra{
@@ -51,7 +52,6 @@ a{
 
 #logo img{
   max-height: 40px;
-  margin-bottom: 20px;
 }
 
 #menu{
@@ -62,6 +62,10 @@ a{
   max-height: 20px;
   max-width: 20px;
   margin-right: 10px;
+}
+
+#menu li{
+  padding-top:15px;
 }
 
 #playlist{
@@ -81,23 +85,22 @@ a{
 #lista-playlist{
   overflow: scroll;
   margin-top: 10px;
+  padding-left: 10px;
   font-size: 12px;
-  height: 150px;
+  height: 250px;
   overflow-x: hidden;
+
 }
 #lista-playlist li{
   font-size: 14px;
   padding-top: 10px;
 }
 
-#app{
+#info-app{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 15px;
-  position: sticky;
-  bottom: 100px;
-  left: 0;
   background-color: black;
   padding: 5px;
 
@@ -130,27 +133,26 @@ a{
 /************ inizio parte centrale ***********/
 
 #parte-centrale{
-  background-color: #141922;
+  /* background-color: #141922; */
+  background-image: linear-gradient(to right bottom, rgb(54, 18, 87), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: auto;
-  padding: 20px;
 }
 
 /**** upgrade**** */
 #upgrade{
   background-color: #080b12;
   min-height: 50px;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   left: 0;
   top:0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 800;
+  z-index: 900;
 }
 
 #upgrade button {
@@ -168,7 +170,7 @@ a{
 }
 /* ******************** */
 #menu-secondario{
-  padding-top: 60px;
+  padding: 50px 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -177,19 +179,36 @@ a{
 
 #menu-secondario li{
   display: inline-block;
-  font-size: 12px;
+  position: relative;
+  font-size: 15px;
   padding-right: 10px;
+  padding-bottom:10px;
+}
+
+.line{
+  width: 30px;
+  height: 2px;
+  background: rgb(43, 209, 35);
+  text-align: center;
+  position: absolute;
+  top:80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* ***************** */
 
 /*** albums rows***** */
 
+#contenitore-albums{
+  padding: 20px;
+}
 
 .albums-row{
   padding-top: 20px;
 }
 .albums-row h3{
+  font-size: 25px;
   padding: 10px;
 }
 
@@ -218,7 +237,7 @@ a{
 }
 
 
-.imgalbum img:hover{
+.imgalbum:hover img{
   filter: brightness(50%);
 }
 
@@ -256,33 +275,28 @@ a{
   bottom:0;
   left: 0;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
-#brano-corrente, #comandi-destra{
-  width: 30%;
-
+#brano-corrente, #comandi-destra, #comandi-play{
+  width: calc(100% /3);
 }
 
-#comandi-play{
-  width:40%;
-}
 
 /* sinistra */
 #brano-corrente{
   display: flex;
   align-items: center;
   padding: 20px;
-  justify-content: space-around;
 }
 
 #brano-corrente img{
-  max-height: 40px;
-  max-width: auto;
+  max-height: 60px;
 }
 
 #brano{
-  font-size: 12px;
+  font-size: 15px;
+  margin: 0 20px;
 }
 
 #brano a{
@@ -360,7 +374,7 @@ a{
 
 #barra-volume{
   height: 3px;
-  width: 40%;
+  width: 20%;
   border: solid grey;
   border: 20px;
   border-radius: 50px;
@@ -399,7 +413,7 @@ a{
 
 #menu-mobile a img{
   height: 20px;
-  margin: 10px;
+  margin: 5px 10px;
 }
 
 #app-mobile{
@@ -439,7 +453,7 @@ a{
   }
 }
 
-@media screen and (min-width: 425px) and (max-width:768px) {
+@media screen and (min-width: 426px) and (max-width:768px) {
   #navmobile{
     display: block;
   }
@@ -448,27 +462,36 @@ a{
   }
 
   /* parte centrale */
-  #upgrade{
-    width: 95%;
-    left: 5%;
-  }
 
   .album-box{
     width: calc(100% / 2);
   }
 
   /* footer */
-  #brano-corrente img{
-    margin-right: 5px;
+
+  #brano-corrente{
+    width: 25%;
+    padding:0;
   }
 
-  #brano{
-    margin-left: 5px;
-    margin-right: 10px;
+  #comandi-play{
+   width:60%;
+  }
+
+  #comandi-destra{
+    width:15%;
+  }
+
+  #brano-corrente img{
+    display:none;
+  }
+
+  #desktop-icon{
+    display: none;
   }
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 426px) {
   #navmobile{
     display: block;
   }
@@ -478,10 +501,6 @@ a{
   }
 
   /* parte centrale */
-  #upgrade{
-    width: 95%;
-    left: 5%;
-  }
 
   .album-box{
     width: calc(100% / 1);
@@ -489,12 +508,26 @@ a{
 
   /* footer */
 
-  #brano-corrente img{
-    margin-right: 5px;
+  #brano-corrente{
+    width: 25%;
+    padding:0;
   }
 
-  #brano{
-    margin-left: 5px;
-    margin-right: 5px;
+  #comandi-play{
+   width:60%;
   }
+
+  #comandi-destra{
+    width:15%;
+  }
+
+  #brano-corrente img{
+    display:none;
+  }
+
+  #desktop-icon, #barra-volume{
+    display: none;
+  }
+
+
 }
