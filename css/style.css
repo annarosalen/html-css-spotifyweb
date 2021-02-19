@@ -41,7 +41,7 @@ a{
   padding: 10px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #bloccosopra{
@@ -78,7 +78,7 @@ a{
 }
 
 #playlist>a>i{
-  font-size: 30px;
+  font-size: 20px;
   padding-right: 10px;
 }
 
